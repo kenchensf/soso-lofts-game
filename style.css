@@ -1,0 +1,76 @@
+/* Basic styling for the SOSO Lofts game */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f16;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #e0e0e0;
+}
+
+#game-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* UI overlay */
+#ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.ui-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.ui-row img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+/* Touch controls layout */
+#touch-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+#touch-controls .horizontal {
+  display: flex;
+  gap: 4px;
+}
+#touch-controls .btn {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#touch-controls .btn:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #touch-controls {
+    display: flex;
+  }
+}
